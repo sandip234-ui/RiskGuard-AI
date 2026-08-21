@@ -1,0 +1,48 @@
+# =========================
+# API / Backend
+# =========================
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# =========================
+# Data Processing
+# =========================
+numpy
+pandas
+scipy
+
+# =========================
+# Machine Learning
+# =========================
+scikit-learn
+xgboost
+joblib
+
+# =========================
+# Explainable AI
+# =========================
+shap
+
+# =========================
+# Visualization / Analysis
+# =========================
+matplotlib
+seaborn
+
+# =========================
+# HTTP / API Communication
+# =========================
+requests
+httpx
+
+# =========================
+# Environment Variables
+# =========================
+python-dotenv
+
+# =========================
+# AI / LLM Layer
+# =========================
+openai
