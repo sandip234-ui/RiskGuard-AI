@@ -1,5 +1,17 @@
 # 🛡️ RiskGuard-AI
 
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-ML-FF6600?style=for-the-badge)
+![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-8A2BE2?style=for-the-badge)
+![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=for-the-badge)
+![Gemma](https://img.shields.io/badge/Gemma_3:4B-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-Validation-E92063?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Working-22C55E?style=for-the-badge)
+
 ### Explainable AI-Powered Fraud Risk Detection & Intelligent Risk Management
 
 > 📐 GitHub-rendered Mermaid diagrams are included for the end-to-end workflow and system architecture.
