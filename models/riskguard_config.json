@@ -1,6 +1,6 @@
 {
     "model": "XGBoost",
-    "threshold": 0.7,
+    "threshold": 0.95,
     "risk_levels": {
         "low": [
             0,
