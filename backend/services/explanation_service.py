@@ -5,6 +5,7 @@
 
 import json
 import logging
+import os
 import re
 import requests
 
@@ -17,11 +18,11 @@ logger = logging.getLogger(__name__)
 # Configuration
 # ============================================================
 
-OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+OLLAMA_BASE_URL = "http://localhost:11434"
 OLLAMA_GENERATE_URL = f"{OLLAMA_BASE_URL}/api/generate"
-OLLAMA_MODEL = "gemma3:4b"
+OLLAMA_MODEL = os.getenv("RISKGUARD_LLM_MODEL", "gemma3:1b")
 
-# Timeout: Gemma 4b can be slow on first load; 120s is generous.
+# Timeout: Gemma 1b can be slow on first load; 120s is generous.
 OLLAMA_TIMEOUT = 120
 
 REQUIRED_FIELDS = [

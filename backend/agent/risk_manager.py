@@ -17,7 +17,7 @@ class RiskManager:
 
         self.model = os.getenv(
             "RISKGUARD_LLM_MODEL",
-            "gemma3:4b"
+            "gemma3:1b"
         )
 
     def analyze(

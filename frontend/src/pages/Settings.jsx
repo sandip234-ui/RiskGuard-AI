@@ -142,7 +142,7 @@ const Settings = () => {
           }
         >
           <InfoRow label="LLM Engine"      value="Ollama" />
-          <InfoRow label="Model"           value="Gemma 3:4B" />
+          <InfoRow label="Model"           value="Gemma 3:1B" />
           <InfoRow
             label="Status"
             value="Active — Integrated"
@@ -155,7 +155,7 @@ const Settings = () => {
               <line x1="12" y1="16" x2="12.01" y2="16"/>
             </svg>
             <span>
-              Local Gemma 3:4B explains XGBoost + SHAP results. Final fraud decision remains governed solely by the XGBoost model.
+              Local Gemma 3:1B explains XGBoost + SHAP results. Final fraud decision remains governed solely by the XGBoost model.
             </span>
           </div>
         </SectionCard>

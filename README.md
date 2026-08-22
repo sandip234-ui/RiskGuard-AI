@@ -8,7 +8,7 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-ML-FF6600?style=for-the-badge)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-8A2BE2?style=for-the-badge)
 ![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=for-the-badge)
-![Gemma](https://img.shields.io/badge/Gemma_3:4B-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Gemma](https://img.shields.io/badge/Gemma_3:1B-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-Validation-E92063?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Working-22C55E?style=for-the-badge)
 
@@ -16,7 +16,7 @@
 
 > 📐 GitHub-rendered Mermaid diagrams are included for the end-to-end workflow and system architecture.
 
-RiskGuard-AI is an **Explainable AI fraud detection system** designed to identify potentially fraudulent financial transactions, quantify their risk, explain the model's decision using SHAP, and generate an analyst-friendly risk assessment using a locally hosted **Gemma 3:4B** model through Ollama.
+RiskGuard-AI is an **Explainable AI fraud detection system** designed to identify potentially fraudulent financial transactions, quantify their risk, explain the model's decision using SHAP, and generate an analyst-friendly risk assessment using a locally hosted **Gemma 3:1B** model through Ollama.
 
 The system combines:
 
@@ -60,7 +60,7 @@ flowchart TD
     H --> J[RiskContext]
 
     J --> K[Ollama]
-    K --> L[Gemma 3:4B]
+    K --> L[Gemma 3:1B]
     L --> M[Structured AI Risk Assessment]
 
     I --> N[FastAPI Response]
@@ -69,7 +69,7 @@ flowchart TD
     N --> O[React + Vite Dashboard]
 ````
 
-> **Important:** XGBoost makes the fraud prediction and final ML decision. Gemma 3:4B does not override the model; it explains and contextualizes the existing ML + SHAP evidence.
+> **Important:** XGBoost makes the fraud prediction and final ML decision. Gemma 3:1B does not override the model; it explains and contextualizes the existing ML + SHAP evidence.
 
 The core principle of RiskGuard is:
 
@@ -522,7 +522,7 @@ RiskGuard includes an AI Risk Manager powered by:
 ```text
 Ollama
    ↓
-Gemma 3:4B
+Gemma 3:1B
 ```
 
 The LLM is used for **risk interpretation**, not fraud classification.
@@ -540,7 +540,7 @@ SHAP Evidence
     ↓
 RiskContext
     ↓
-Gemma 3:4B
+Gemma 3:1B
     ↓
 Structured Risk Assessment
 ```
@@ -625,7 +625,7 @@ flowchart TB
 
     subgraph LLM["Local AI Risk Manager"]
         N[Ollama]
-        O[Gemma 3:4B]
+        O[Gemma 3:1B]
         P[Structured Risk Assessment]
     end
 
@@ -663,7 +663,7 @@ flowchart LR
     ML --> RE[Risk Engine]
     RE --> RC[RiskContext]
     RC --> OLLAMA[Ollama]
-    OLLAMA --> GEMMA[Gemma 3:4B]
+    OLLAMA --> GEMMA[Gemma 3:1B]
     GEMMA --> API
     ML --> API
     API --> FE
@@ -734,7 +734,7 @@ RiskGuard-AI/
 ## AI / LLM
 
 * Ollama
-* Gemma 3:4B
+* Gemma 3:1B
 
 ## Backend
 
@@ -799,16 +799,16 @@ pip install -r requirements.txt
 
 Install Ollama and make sure the server is running.
 
-Pull Gemma 3:4B:
+Pull Gemma 3:1B:
 
 ```bash
-ollama pull gemma3:4b
+ollama pull gemma3:1b
 ```
 
 Run:
 
 ```bash
-ollama run gemma3:4b
+ollama run gemma3:1b
 ```
 
 Verify the Ollama API:
@@ -820,7 +820,7 @@ curl http://localhost:11434/api/tags
 The response should contain:
 
 ```text
-gemma3:4b
+gemma3:1b
 ```
 
 RiskGuard communicates with:
@@ -871,7 +871,7 @@ Recommended execution order:
         ↓
 12. RiskContext
         ↓
-13. Gemma 3:4B Risk Assessment
+13. Gemma 3:1B Risk Assessment
 ```
 
 ---
@@ -966,7 +966,7 @@ Therefore, the threshold is selected according to the intended operational trade
 | Local SHAP               | ✅ Complete |
 | Risk Engine              | ✅ Complete |
 | RiskContext              | ✅ Complete |
-| Gemma 3:4B integration   | ✅ Complete |
+| Gemma 3:1B integration   | ✅ Complete |
 | Structured AI output     | ✅ Complete |
 | FastAPI integration      | ✅ Complete |
 | React dashboard          | ✅ Complete |
@@ -1073,7 +1073,7 @@ ML → XAI → Risk Engine → LLM → FastAPI → React
 The research pipeline is now connected to a working application using:
 
 ```text
-FastAPI + React + XGBoost + SHAP + Ollama + Gemma 3:4B
+FastAPI + React + XGBoost + SHAP + Ollama + Gemma 3:1B
 ```
 
 ---
